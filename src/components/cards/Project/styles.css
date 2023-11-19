@@ -1,0 +1,64 @@
+.project-card {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+
+}
+
+.project-card h2 {
+    color: #6358DC;
+}
+
+.project-card p {
+    color: black;
+
+}
+
+
+
+.project-card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    ;
+
+}
+
+.project-card span {
+    color: #6358DC;
+    font-weight: 500;
+}
+
+.project-card img {
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+
+}
+
+.project-card .btn-proposta {
+    border: 2px solid #6358DC;
+    border-radius: 30px;
+    padding: 5px;
+    font-size: 13px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 500;
+    color: #6358DC;
+    background-color: transparent;
+}
+
+.Flex {
+    display: flex;
+    margin-top: 0px;
+    justify-content: space-between;
+    align-items: center;
+    border-color: #7246E5;
+
+}
+
+.project-card label {
+    color: black;
+}

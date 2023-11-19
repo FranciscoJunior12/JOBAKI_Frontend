@@ -1,0 +1,30 @@
+.side-bar {
+    position: fixed;
+    height: 100vh;
+    padding: 40px 10px 10px 10px;
+    background-color: rgb(255,255,255);
+}
+
+.side-bar ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.side-bar ul li {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    color: black;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.side-bar span {
+    color: black;
+    font-size: 20px;
+}

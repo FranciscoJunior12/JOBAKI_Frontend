@@ -1,0 +1,305 @@
+/**
+*@author Francisco Junior
+*@author edilson ricardo
+*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;900&display=swap');
+
+/* CSS reset */
+* {
+
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+
+}
+
+body {
+    background-color: #F4F4F4;
+}
+
+.containeer {
+    background-color: #F4F4F4;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 30px 40px;
+}
+
+
+
+
+
+.container-login {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    min-width: 470px;
+    max-width: 550px;
+    padding: 15px 50px 0px;
+}
+
+
+.welcome-text {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.welcome-text p {
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+
+h1 {
+    font-size: 30px;
+    font-family: 'Poppins', sans-serif;
+    color: #6358DC;
+    font-weight: 900;
+
+}
+
+#div-buttom {
+
+    margin-top: 20px;
+
+}
+
+#div-buttom img {
+    width: 5%;
+
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#div-buttom a {
+    text-decoration: none;
+    /* font-family: 'Poppins', sans-serif; */
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.buttom {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.11);
+    border-radius: 8px;
+    transition: background 1.5s;
+}
+
+.btn-login:hover {
+    background-color: #996ee8;
+}
+
+
+#div-buttom p {
+    font-size: 12px;
+
+}
+
+.flex0 {
+
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex0 p {
+    color: black;
+    font-size: 14px;
+    font-weight: 400;
+
+}
+
+.row {
+    min-width: 140px;
+    border-color: #BFBFBF;
+}
+
+.div-form {
+    margin-top: 20px;
+    margin-bottom: 4px;
+}
+
+.flex1 {
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #ECECEC;
+    border-radius: 8px;
+    padding: 10px 15px 10px 15px;
+
+
+}
+
+.space {
+    justify-content: space-between;
+
+}
+
+.flex1 p {
+    font-size: 10px;
+    font-weight: 400;
+}
+
+.flex2 {
+    display: flex;
+    flex-direction: column;
+}
+.flex2 p{
+    color: black;
+}
+
+.pad {
+
+    padding: 0px;
+}
+
+.text-input {
+
+    background-color: #ECECEC;
+    border: none;
+    min-width: 280px;
+    border: none;
+    
+    /* max-width: 280px; */
+
+}
+
+input:focus-visible {
+    outline: none;
+}
+
+.div-form img:last-child:hover {
+    cursor: pointer;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+
+.div {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+.div a {
+    text-decoration: none;
+    color: #6358DC;
+}
+
+.div label,
+a {
+    font-size: 12px;
+
+}
+
+.div label:hover {
+    cursor: pointer;
+}
+
+#check {
+
+    min-width: auto;
+
+}
+
+#save-passoword {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+}
+#save-passoword label {
+    color: black;
+}
+.btn-login {
+
+    background-color: #6358DC;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.btn-login input {
+    background-color: transparent;
+    border: none;
+    color: #FFFFFF;
+}
+
+.btn-login,
+.btn-login input:hover {
+    cursor: pointer;
+}
+
+form a:last-child {
+    color: #6358DC;
+    text-decoration: none;
+
+}
+
+
+form p:last-child {
+    color: black;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
+@media(max-width:360px) {
+    h1 {
+        font-size: 25px;
+    }
+}
+
+@media(min-width:280px) and (max-width:1024px) {
+
+
+    .div-img {
+        display: none;
+    }
+
+    .container-login {
+
+        min-width: auto;
+        width: 100%;
+        padding: 15px 30px 0px 30px;
+        margin-top: 8%;
+
+    }
+
+
+
+    .container {
+        height: 100%;
+
+        padding: 20px 30px;
+    }
+
+    .row {
+        min-width: 45%;
+
+    }
+}
