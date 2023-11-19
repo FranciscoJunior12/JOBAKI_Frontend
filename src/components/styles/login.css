@@ -21,6 +21,7 @@ body {
     background-color: #F4F4F4;
 }
 
+
 .containeer {
     background-color: #F4F4F4;
     width: 100%;
@@ -58,7 +59,7 @@ body {
 }
 
 
-h1 {
+.welcome-text h1 {
     font-size: 30px;
     font-family: 'Poppins', sans-serif;
     color: #6358DC;
@@ -164,7 +165,8 @@ ul {
     display: flex;
     flex-direction: column;
 }
-.flex2 p{
+
+.flex2 p {
     color: black;
 }
 
@@ -179,7 +181,7 @@ ul {
     border: none;
     min-width: 280px;
     border: none;
-    
+
     /* max-width: 280px; */
 
 }
@@ -192,7 +194,7 @@ input:focus-visible {
     cursor: pointer;
 }
 
-form {
+.div-form form {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -210,10 +212,10 @@ form {
 .div a {
     text-decoration: none;
     color: #6358DC;
+    font-size: 12px;
 }
 
-.div label,
-a {
+.div label {
     font-size: 12px;
 
 }
@@ -234,9 +236,11 @@ a {
     gap: 8px;
 
 }
+
 #save-passoword label {
     color: black;
 }
+
 .btn-login {
 
     background-color: #6358DC;
