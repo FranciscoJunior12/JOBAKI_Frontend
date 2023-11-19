@@ -17,14 +17,16 @@ const Login = () => {
     const [responseData, setResponseData] = useState(null);
 
 
-    const handleLogin = async () => {
+    const handleLogin = async (e) => {
 
-        if (!email || !password) return
+        e.preventDefault();
 
-        const url = 'http://localhost:3000/users/login';
+        if (!email || !password) return alert("Preecha os campos")
+
+        const url = 'https://jobaki-rest-api.vercel.app/api/jobaki/user/login';
         const dados = {
             email: email,
-            password: password,
+            senha: password,
 
         };
 
@@ -49,13 +51,18 @@ const Login = () => {
             if (response.status === 200) {
 
                 setError(false)
-                const user = await response.json();
-                setResponseData(user);
-                localStorage.setItem('currentUser', JSON.stringify(user));
 
-                if (user.perfil === "user") {
+                const { userlogin } = await response.json();
+
+                console.log(userlogin)
+                // const { user } = await response.json();
+                setResponseData(userlogin);
+                localStorage.setItem('currentUser', JSON.stringify(userlogin));
+
+                if (userlogin.perfil === "Freelancer") {
                     return navigate("/home")
                 }
+
                 return navigate("/perfil")
 
             }
@@ -63,6 +70,7 @@ const Login = () => {
 
 
         } catch (error) {
+
             console.error('Erro na requisição:', error);
         }
     };
@@ -124,23 +132,31 @@ const Login = () => {
 
                 <div className="div-form">
 
-                    <form>
+                    <form onSubmit={handleLogin}>
 
 
-                        <label className="flex1">
+                        <label className={`flex1 ${error === true ? "red" : ""}`}>
                             <img style={{ width: '5%' }} src="email.png" />
                             <label className="flex2">
                                 <p>Email</p>
-                                <input className="text-input" placeholder="example@gmail.com" id="email" />
+                                <input className="text-input" placeholder="example@gmail.com" id="email"
+
+                                    value={email}
+                                    onChange={(e) => { setEmail(e.target.value) }}
+                                />
                             </label>
                         </label>
 
-                        <label className="flex1 space">
+                        <label className={`flex1 space ${error === true ? "red" : ""}`}>
                             <label className="flex1 pad">
                                 <img style={{ width: '8%' }} src="key.png" />
                                 <label className="flex2">
                                     <p>Senha</p>
-                                    <input className="text-input" type="password" placeholder="*********" id="senha" />
+                                    <input className="text-input " type="password" placeholder="*********" id="senha"
+
+                                        value={password}
+                                        onChange={(e) => { setPassword(e.target.value) }}
+                                    />
                                 </label>
 
 
