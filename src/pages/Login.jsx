@@ -63,7 +63,7 @@ const Login = () => {
                     return navigate("/home")
                 }
 
-                return navigate("/perfil")
+                return navigate("/home")
 
             }
 

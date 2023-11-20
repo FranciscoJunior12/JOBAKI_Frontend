@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useLocation } from 'react-router-dom'
 
 import '../../cards/Project/styles.css'
@@ -7,6 +7,7 @@ import '../../styles/Grid.css'
 import './proposal.css';
 
 const ProposalForm = ({ title }) => {
+    const navegate = useNavigate();
 
     const { state } = useLocation();
     const currentUser = JSON.parse(localStorage.getItem('currentUser'));
@@ -34,6 +35,7 @@ const ProposalForm = ({ title }) => {
             estado_de_aceitacao: "P",
             status: true,
             titulo_projecto: state.titulo,
+            descricao: state.descricao,
             tecnologias: tecnologia,
             proposta_pagamento: pagamento,
             disponibilidade: disponibilidade,
@@ -59,7 +61,11 @@ const ProposalForm = ({ title }) => {
             if (response.status == 201) {
 
                 alert("Projecto publicado com sucesso!")
+                setAnosExperiencia('')
+                setDisponibilidade('')
+                setPagamento('')
                 return navegate("/home")
+
 
             }
 

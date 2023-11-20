@@ -9,11 +9,15 @@ import useFecth from "../hooks/useFetch";
 import '../components/styles/Grid.css'
 
 const Home = () => {
+
     // const { data: projects, isPending, error } = useFecth("https://jobaki-rest-api.vercel.app/api/jobaki/post");
     // const { setData } = useContext(DataContext);
     //const [projects, setProjects] = useState([]);
-    const [post, setPosts] = useState([]);
 
+    const [post, setPosts] = useState([]);
+    
+
+    const currentUser = JSON.parse(localStorage.getItem('currentUser'));
     const [nome, setNome] = useState('')
 
     const getProject = async (url) => {
@@ -41,9 +45,13 @@ const Home = () => {
 
 
                 <div className="movies-container">
-             
+
                     {post.length === 0 && <p>Caregando...</p>}
-                    {post.length > 0 && post.map((projecto) => <ProjectCard projecto={projecto} />)}
+                    {post.length > 0 && post.map((projecto) =>
+
+                        currentUser.perfil === "Freelancer" ? <ProjectCard projecto={projecto} /> : (
+                            currentUser._id === projecto.companyId ? <ProjectCard projecto={projecto} /> : ""
+                        ))}
 
                 </div>
             </div>

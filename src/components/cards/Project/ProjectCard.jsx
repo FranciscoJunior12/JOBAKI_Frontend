@@ -4,6 +4,7 @@ import "./styles.css"
 
 const ProjectCard = ({ projecto }) => {
     const navigate = useNavigate();
+    const currentUser = JSON.parse(localStorage.getItem('currentUser'));
 
     const handleClick = () => {
         localStorage.setItem("projecto", projecto);
@@ -25,9 +26,12 @@ const ProjectCard = ({ projecto }) => {
 
             <div className="Flex">
                 <h2>{projecto.titulo}</h2>
-                <button className="btn-proposta" onClick={() => { handleClick() }}>
-                    Fazer Proposta
-                </button>
+
+                {
+                    currentUser.perfil === "Freelancer" ? <button className="btn-proposta" onClick={() => { handleClick() }}>
+                        Fazer Proposta
+                    </button> : ""
+                }
             </div>
 
             <p>{projecto.descricao}</p>

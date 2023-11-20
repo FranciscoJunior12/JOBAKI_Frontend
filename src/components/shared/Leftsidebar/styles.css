@@ -3,7 +3,7 @@
     height: 90vh;
     border-radius: 5px;
     padding: 20px 10px 10px 10px;
-    background-color: rgb(255,255,255);
+    background-color: rgb(255, 255, 255);
     margin-top: 22px;
     width: 300px;
 }
@@ -17,21 +17,21 @@
 .side-bar ul li {
     display: flex;
     align-items: center;
-    background-color: #F7D354;
     gap: 5px;
     padding: 10px;
     border-radius: 5px;
     color: black;
     font-size: 16px;
-    font-style: italic;
     font-weight: 600;
+    background-color: #F0F4FC;
     cursor: pointer;
+    /* transition: background-color 0.5s ease-in-out; */
 }
 
 .side-bar ul li:hover {
     background-color: white;
-    border: 1px solid #F7D354;
-    color: #F7D354;
+    /* border: 1px #B2BED4 solid; */
+    /* color: #F7D354; */
 }
 
 .side-bar span {
@@ -41,4 +41,12 @@
 
 .side-bar span:hover {
     color: #F7D354;
+}
+
+.side-bar ul li a {
+    display: flex;
+    gap: 5px;
+    color: black;
+    font-weight: normal;
+    font-style: normal;
 }

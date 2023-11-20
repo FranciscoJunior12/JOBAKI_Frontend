@@ -11,6 +11,10 @@ import Search from './pages/search.jsx'
 import Details from './pages/Details.jsx'
 import UserRegistration from './pages/UserRegistration.jsx'
 import Proposal from './pages/Proposal.jsx'
+import Suporte from './pages/Suporte.jsx'
+import ProposalsSent from './pages/ProposalsSent.jsx'
+import CreateProject from './pages/CreateProject.jsx'
+import Notification from './components/Notification.jsx'
 
 
 
@@ -26,9 +30,13 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             <Route path='/home' element={<Home />} />
             <Route path='/proposta/:id' element={<Proposal />} />
             <Route path='/perfil' element={<Profile />} />
+            <Route path='/notificacao' element={<Notification />} />
             <Route path='/cadastro' element={<UserRegistration />} />
             <Route path='/search' element={<Search />} />
             <Route path='/restaurant/details/:id' element={<Details />} />
+            <Route path="/suporte" element={<Suporte />} />
+            <Route path="/propostas" element={<ProposalsSent />} />
+            <Route path="/projecto" element={<CreateProject />} />
           </Route>
         </Routes>
       </BrowserRouter>

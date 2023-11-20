@@ -6,11 +6,18 @@ import { IoNotificationsOutline } from "react-icons/io5";
 import { MdOutlineInsertComment } from "react-icons/md";
 import './styles/Navbar.css';
 
+import { IoSettingsOutline } from "react-icons/io5";
+import { IoIosHelpCircleOutline } from "react-icons/io";
+import { CiUser } from "react-icons/ci";
+
+import { IoIosLogOut } from "react-icons/io";
 import { useState, useContext } from 'react';
 import { DataContext } from '../context/GlobalData';
 
 
 const NavBar = () => {
+
+    const currentUser = JSON.parse(localStorage.getItem('currentUser'))
     const { filter, setFilter } = useContext(DataContext);
     const [dropMenu, setDropMenu] = useState(false);
 
@@ -73,17 +80,38 @@ const NavBar = () => {
                     </span>
                 </div>
 
-                <span className='perfil' onClick={() => setDropMenu((current)=> !current)}>
+                <span className='perfil' onClick={() => setDropMenu((current) => !current)}>
                     <Link to="#" className='user-profile'>
                         <BsPersonCircle />
-                        <p>Francisco Junior</p>
+                        <p> {currentUser.perfil === "Freelancer" ? currentUser.nome : currentUser.nome_empresa}</p>
                     </Link>
                     {
                         dropMenu && (
                             <div className='profile-content'>
-                                <Link to="#">Settings</Link>
-                                <Link to="#">Help</Link>
-                                <Link to="#">Sign out</Link>
+                                <div className='dropdown-header'>
+                                    <h6> {currentUser.perfil === "Freelancer" ? currentUser.nome : currentUser.nome_empresa}
+                                    </h6>
+                                    <p> {currentUser.perfil === "Freelancer" ? currentUser.area_actuacao : ""}</p>
+                                </div>
+                                <ul>
+
+                                    <li>
+                                        <CiUser /> <Link to="#">Meu perfil</Link>
+                                    </li>
+
+                                    <li>
+                                        <IoSettingsOutline /> <Link to="#">Definições de conta</Link>
+                                    </li>
+
+                                    <li>
+                                        <IoIosHelpCircleOutline />  <Link to="#">Ajuda</Link>
+
+                                    </li>
+
+                                    <li>
+                                        <IoIosLogOut /> <Link to="/">Sair</Link>
+                                    </li>
+                                </ul>
                             </div>
                         )
                     }

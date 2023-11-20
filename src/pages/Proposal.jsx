@@ -9,7 +9,7 @@ const Proposal = () => {
         <>
             <NavBar />
             <LeftSidebar />
-            <ProposalForm/>
+            <ProposalForm />
         </>
 
     )
