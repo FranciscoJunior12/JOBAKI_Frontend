@@ -1,0 +1,92 @@
+.freelancer-signup-container {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 65%;
+     padding: 15px;
+     min-height: 500px;
+     margin-top: 7%;
+}
+
+.freelancer-form-container {
+     width: 100%;
+     min-width: 800px;
+     max-width: 500px;
+     padding: 15px 50px 50px;
+     border: 1px solid gray;
+}
+
+.freelancer-form-container nav {
+     position: fixed;
+     top: 0;
+     left: 0;
+     padding: 10px;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.11);
+     width: 70%;
+     background-color: #F4F4F4;
+}
+
+.freelancer-form-container nav h1 {
+     color: #6358DC;
+     font-size: 30px;
+}
+
+.freelancer-form-container form {
+     display: flex;
+     flex-direction: column;
+     gap: 15px;
+}
+
+.freelancer-form-container form div {
+     display: flex;
+     gap: 8px;
+}
+
+.freelancer-form-container label {
+     width: 30%;
+     color: black;
+}
+
+.freelancer-form-container input,
+select,
+textarea {
+     width: 80%;
+}
+
+.freelancer-form-container .form-button {
+     display: flex;
+     justify-content: center;
+}
+
+.freelancer-form-container .form-button button {
+     border: 2px solid #6358DC;
+     border-radius: 10px;
+     padding: 10px;
+     font-size: 18px;
+     font-family: "Open Sans", sans-serif;
+     font-weight: 500;
+     color: #6358DC;
+     background-color: transparent;
+}
+
+.freelancer-signup-image {
+     width: 35%;
+     height: 100%;
+     position: fixed;
+     top: 0px;
+     right: 0px;
+     flex: 3;
+     background: url("https://wkncdn.com/newx/assets/build/img/talent-onboard/talent-onboard-signup-bg-dsk.e071bb82d.jpg");
+     background-position: center;
+     background-size: cover;
+     display: flex;
+     justify-content: center;
+     padding: 4rem;
+}
+
+.freelancer-signup-image .rightSide {
+     color: #6358DC;
+}

@@ -11,11 +11,11 @@ import '../components/styles/Grid.css'
 const Home = () => {
 
     // const { data: projects, isPending, error } = useFecth("https://jobaki-rest-api.vercel.app/api/jobaki/post");
-    // const { setData } = useContext(DataContext);
+    const { setData } = useContext(DataContext);
     //const [projects, setProjects] = useState([]);
 
     const [post, setPosts] = useState([]);
-    
+
 
     const currentUser = JSON.parse(localStorage.getItem('currentUser'));
     const [nome, setNome] = useState('')
@@ -24,7 +24,7 @@ const Home = () => {
         const res = await fetch(url);
         const data = await res.json();
 
-        //setData(data);
+        setData(data);
         console.log(data)
         setPosts(data);
         setNome('Augusto')
@@ -51,6 +51,7 @@ const Home = () => {
 
                         currentUser.perfil === "Freelancer" ? <ProjectCard projecto={projecto} /> : (
                             currentUser._id === projecto.companyId ? <ProjectCard projecto={projecto} /> : ""
+                            
                         ))}
 
                 </div>

@@ -183,7 +183,7 @@ const Login = () => {
 
 
                         <p style={{ fontSize: '12px', textAlign: 'center' }}>
-                            Não tem uma conta? <a href="#">Registrar-se</a>
+                            Não tem uma conta? <Link to="/user/selection" >Registrar-se</Link>
                         </p>
 
                     </form>
