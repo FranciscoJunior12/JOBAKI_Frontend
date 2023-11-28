@@ -19,6 +19,7 @@ import UserSelection from './pages/UserSelection.jsx'
 import FreelancerSignUp from './pages/FreelancerSignUp.jsx'
 import ClientSignUp from './pages/ClientSignUp.jsx'
 import Search from './pages/Search.jsx'
+import Welcome from './pages/welcome.jsx'
 
 
 
@@ -30,14 +31,14 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <BrowserRouter>
         <Routes>
           <Route element={<App />}>
-            <Route path='/' element={<Login />} />
+            <Route path='/' element={<Welcome/>} />
+            <Route path='/login' element={<Login />} />
             <Route path='/home' element={<Home />} />
             <Route path='/proposta/:id' element={<Proposal />} />
             <Route path='/perfil' element={<Profile />} />
             <Route path='/notificacao' element={<Notification />} />
             <Route path='/cadastro' element={<UserRegistration />} />
             <Route path='/search/' element={<Search />} />
-            <Route path='/restaurant/details/:id' element={<Details />} />
             <Route path="/suporte" element={<Suporte />} />
             <Route path="/propostas" element={<ProposalsSent />} />
             <Route path="/projecto" element={<CreateProject />} />

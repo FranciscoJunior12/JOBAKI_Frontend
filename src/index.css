@@ -1,1 +1,17 @@
 
+/* Estilizar a barra de rolagem */
+::-webkit-scrollbar {
+    width: 8px; /* Largura da barra de rolagem */
+  }
+  
+  /* Estilizar o botão de rolagem (thumb) */
+  ::-webkit-scrollbar-thumb {
+    background-color: #9898b3;
+    border-radius: 9px; /* Borda arredondada do botão de rolagem */
+  }
+  
+  /* Estilizar a pista da barra de rolagem (fundo) */
+  ::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Cor de fundo da barra de rolagem */
+  }
+  

@@ -7,6 +7,7 @@ import { DataContext } from "../context/GlobalData";
 import LeftSidebar from "../components/shared/Leftsidebar/LeftSidebar";
 import useFecth from "../hooks/useFetch";
 import '../components/styles/Grid.css'
+import Popup from "../components/Popup";
 
 const Home = () => {
 
@@ -56,6 +57,7 @@ const Home = () => {
 
                 </div>
             </div>
+           
         </>
     )
 }

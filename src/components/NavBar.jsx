@@ -30,7 +30,7 @@ const NavBar = () => {
         e.preventDefault();
         if (!search) return;
 
-        console.log(filter)
+       // console.log(filter)
 
         navigate(`/search?q=${search}`);
         setSearch("");
@@ -49,9 +49,10 @@ const NavBar = () => {
                     setFilter(e.target.value)
                 }} >
                     <option>Filter by</option>
-                    <option value="Tipo de Cozinha" >Minhas Habilidades</option>
-                    <option value="Localização" >Data de Publicação</option>
-                    <option value="Faixa Preço" >Categoria</option>
+                    <option value="Minhas Habilidades" >Minhas Habilidades</option>
+                    <option value="Título do Projecto" >Título do Projecto</option>
+                    <option value="Data" >Data de Publicação</option>
+                    <option value="Categoria" >Categoria</option>
                 </select>
 
                 <div className='form-search'>

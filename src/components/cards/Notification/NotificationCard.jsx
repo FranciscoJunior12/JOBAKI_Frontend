@@ -1,10 +1,14 @@
 import React from 'react'
 import './notification.css'
 import { useNavigate } from 'react-router-dom'
+import { DataContext } from '../../../context/GlobalData';
+import { useContext } from 'react';
 
 
 
 const NotificationCard = ({ proposal }) => {
+    const { open, setOpen, close, setClose } = useContext(DataContext);
+
 
     const navegate = useNavigate();
 
@@ -46,10 +50,13 @@ const NotificationCard = ({ proposal }) => {
 
                 if (response.status == 200) {
 
+                    
+                    
                     alert("Proposta Aceite com sucesso!")
-                    navegate('/notificacao')
-
-
+                    location.reload();
+                    ;
+                    
+                    
                 }
 
             } else {
@@ -67,6 +74,7 @@ const NotificationCard = ({ proposal }) => {
                 if (response.status == 200) {
 
                     alert("Proposta recusada com sucesso!")
+                    location.reload();
 
                 }
             }
@@ -74,7 +82,7 @@ const NotificationCard = ({ proposal }) => {
 
 
 
-
+                    
         } catch (error) {
             console.error('Erro na requisição:', error);
         }

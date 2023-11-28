@@ -36,7 +36,7 @@ const UserSelection = () => {
         </div>
 
         <p>
-          Já tem uma conta? <Link to="/">Entrar</Link>
+          Já tem uma conta? <Link to="/login">Entrar</Link>
         </p>
       </main>
     </div>

@@ -7,6 +7,7 @@ import NavBar from '../components/NavBar';
 import { IoRestaurantOutline } from 'react-icons/io5';
 import Card from '../components/Card';
 import LeftSidebar from '../components/shared/Leftsidebar/LeftSidebar';
+import ProjectCard from '../components/cards/Project/ProjectCard';
 
 const Search = () => {
     const [searchParams] = useSearchParams();
@@ -19,7 +20,7 @@ const Search = () => {
 
     const getSearchProject = () => {
 
-
+        console.log(filter === "Minhas Habilidades");
         if (filter === "Minhas Habilidades") {
             console.log(data)
             const newData = data.filter((post) => {

@@ -8,6 +8,8 @@ export const DataContext = createContext();
 export const DataProvider = ({ children }) => {
 
 
+    const [open, setOpen] = useState(false);
+    const [close, setClose] = useState(false);
 
     const [data, setData] = useState([]);
 
@@ -19,7 +21,7 @@ export const DataProvider = ({ children }) => {
 
 
     return (
-        <DataContext.Provider value={{ data, setData, filter, setFilter, comment, setComment, update, setUpdate, idRating, setIdRating }}>
+        <DataContext.Provider value={{ data, setData, filter, setFilter, comment, setComment, update, setUpdate, idRating, setIdRating, open, setOpen, close, setClose }}>
             {children}
         </DataContext.Provider>
     )

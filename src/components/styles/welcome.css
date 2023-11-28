@@ -1,0 +1,280 @@
+/**
+*@author Francisco Junior
+*@author Edilson Ricardo
+*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;900&display=swap');
+
+/* CSS reset */
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.underMain {
+    background-color: #060460;
+    color: white;
+    padding: 70px 70px 70px;
+    display: flex;
+}
+
+
+
+.container2 {
+    max-width: 50vw;
+}
+
+.footer {
+    display: flex;
+    padding: 30px 70px 70px;
+}
+
+.footer p {
+    color: black;
+}
+
+
+    #main-section {
+        height: 100vh;
+    }
+
+    header {
+        padding: 20px 30px 10px 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.11);
+        /* position: fixed; */
+
+    }
+
+
+    #main-section h1 {
+        font-size: 30px;
+        font-family: 'Poppins', sans-serif;
+        color: #6358DC;
+        font-weight: 900;
+    }
+
+    .a {
+        text-decoration: none;
+        font-size: 17px;
+        color: #3c3c3c;
+    }
+
+
+
+    #check {
+        display: none;
+    }
+
+
+    #main-section li a:hover {
+        color: #6358DC;
+    }
+
+    #main-section label {
+        font-size: 40px;
+        color: #6358DC;
+    }
+
+    @media(min-width:375px) {
+
+
+        #main-section ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+
+            position: fixed;
+            top: 90px;
+            left: 0;
+            width: 100%;
+            backface-visibility: hidden;
+            -webkit-font-smoothing: subpixel-antialiased;
+            will-change: transform, opacity;
+            transition: transform .3s ease-in-out, opacity;
+            z-index: 3;
+            transform: translateY(-100%);
+            opacity: 0;
+            visibility: hidden;
+
+        }
+
+
+        #check:checked~ul {
+
+            opacity: 1;
+            transform: translateY(0);
+            visibility: visible;
+
+        }
+
+        #paragrafo {
+            margin-bottom: 50px;
+        }
+
+
+
+        #main-section li {
+            padding: 10px;
+            background-color: #f4f0ff;
+        }
+
+        #main-section ul li:first-child {
+            border-bottom: 0.5px solid rgba(0, 0, 0, 0.11);
+        }
+
+    }
+
+
+    @media(min-width:1200px) {
+
+
+        #check {
+            display: none;
+
+        }
+
+        #main-section label {
+            display: none;
+        }
+
+        #main-section ul {
+            display: none;
+        }
+
+        #main-section header {
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+
+        #main-section main {
+
+            display: flex;
+            padding: 0px 70px 70px;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+
+        }
+
+        .containeeer{
+
+            display: flex;
+            align-items: center;
+            gap: 40px;
+
+        }
+
+
+        .containeeer h2 {
+            font-size: 50px;
+            color: #3c3c3c;
+        }
+
+        .containeeer h4 {
+            font-size: 24px;
+            font-weight: normal;
+            color: #3c3c3c;
+        }
+
+        #main-section span {
+
+            color: #6358DC;
+        }
+
+        #buttons {
+            margin-top: 10%;
+        }
+
+        .butt {
+
+            padding: 12px 18px;
+            border: 1px solid #5632AF;
+            color: #5632AF;
+            border-radius: 50px;
+        }
+
+        .cor {
+            position: relative;
+            bottom: 307px;
+            width: 100%;
+            height: 98%;
+            background-color: rgba(5, 29, 245, 0.524);
+            opacity: 0.5;
+            border-radius: 20px;
+        }
+
+        .btn {
+            background-color: #6358DC;
+            margin-left: 15px;
+            color: white;
+        }
+
+        .botaoSaibaMais {
+            padding: 8px 18px;
+            border: 1px solid rgb(83, 241, 83);
+            color: rgb(83, 241, 83);
+            border-radius: 50px;
+
+        }
+
+        #div-img img {
+            border-radius: 50px;
+            overflow: hidden;
+        }
+
+        .underMain {
+            flex-direction: row;
+            justify-content: space-between;
+            max-height: 500px;
+        }
+
+        #img2 {
+            width: 400px;
+            height: 300px;
+            border-radius: 20px;
+        }
+
+        .underMain .container2 span {
+            color: rgb(83, 241, 83);
+        }
+
+        .underMain .container2 a {
+            /* margin: 250px; */
+
+        }
+
+        #paragrafoDev {
+            font-size: 40px;
+        }
+
+        .footer {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            height: 100px;
+            padding-top: 70px;
+        }
+
+        .socials a {
+            margin: 0px 10px;
+        }
+
+        .socials a:hover {
+            color: #6358DC;
+            background-color: rgb(0, 217, 255);
+        }
+
+        .socials p {
+            font-size: 12px;
+            padding-left: 35px;
+        }
+
+
+    }
